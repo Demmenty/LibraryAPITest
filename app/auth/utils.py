@@ -11,9 +11,8 @@ from app.config import settings
 from app.users.models import UserModel, UserRole
 
 STRONG_PASSWORD_PATTERN = re.compile(
-    r"^(?=.*[\d])(?=.*[A-Za-z])(?=.*[!@#%^&*])[A-Za-z\d!@#%^&*]{6,128}$"
+    r"^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#%^&*_]).{6,128}$"
 )
-
 
 def generate_random_alphanum(length: int = 20) -> str:
     """
