@@ -28,6 +28,11 @@ docker exec -it api alembic -c alembic.ini upgrade head
 docker exec -it api python -m app.main createadmin
 ```
 
+- run unit tests
+```
+docker exec -it api pytest app/
+```
+
 ### Local
 
 - install PostgreSQL database
